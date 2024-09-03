@@ -9,8 +9,8 @@ public with sharing class MappingService {
       String dateString2 = 'dd-MMMM-yyyy  hh:mm:ss aaa';
 
       DateTime dt = System.now();
-      System.debug('This is the First Format: ' + dt.format(dateString1));
-      System.debug('This is the Second Format: ' + dt.format(dateString2));
+      System.debug('This is the First Format: ' + dt.format(dateString1, orgDetails.TimeZoneSidKey));
+      System.debug('This is the Second Format: ' + dt.format(dateString2, orgDetails.TimeZoneSidKey));
       /*
             addDays(additionalDays)
             addHours(additionalHours)
