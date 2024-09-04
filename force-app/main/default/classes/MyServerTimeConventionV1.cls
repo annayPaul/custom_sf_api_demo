@@ -1,4 +1,4 @@
-@RestResource(urlMapping='/v1/ServerTime/')
+@RestResource(urlMapping='/v1/ServerTime')
 global with sharing class MyServerTimeConventionV1 {
     @HttpGet
     global static String doGet(){
