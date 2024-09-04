@@ -20,7 +20,7 @@ global with sharing class MyServerTime {
         if(versionId.equals('v2')){
             return serverTime.format(dateString2, orgDetails.TimeZoneSidKey); // v2 returns am/pm
         }
-        
-        return 'Wrong Response';
+        RestContext.response.statusCode = 400;
+        return 'Wrong Endpoint';
     }
 }
