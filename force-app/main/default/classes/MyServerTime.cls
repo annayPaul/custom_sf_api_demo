@@ -1,10 +1,5 @@
 @RestResource(urlMapping='/ServerTime/*')
 global with sharing class MyServerTime {
-    public static void showLogs(){
-        String dateString1 = 'dd-MMMM-yyyy HH:mm:ss z';
-        String dateString2 = 'dd-MMMM-yyyy  hh:mm:ss aaa';
-        DateTime serverTime = System.now();
-    }
     @HttpGet
     global static String doGet() {
         Organization orgDetails = [SELECT Id, Name, TimeZoneSidKey, SystemModstamp  FROM Organization WHERE Id = :UserInfo.getOrganizationId()];
